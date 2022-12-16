@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essensgenerator</title>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="shortcut icon" href="./img/question.png" type="image/png">
@@ -13,21 +14,32 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="./img/question_0.png"></a>
-        <div>
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="generator.html">Generator</a></li>
-            </ul>
-        </div>
-    </header>
     <main>
-        <h1 class="headertext">Keine Ahnung, was es heute zu essen geben soll? Hier ist die Lösung:</h1>
+        <div class="wrapper">
+            <div class="buttons">
+                <button onclick="alles()" class="button">Alles</button>
+                <button onclick="pre()" class="button">Vorspeise</button>
+                <button onclick="mid()" class="button">Hauptspeise</button>
+                <button onclick="after()" class="button">Nachspeise</button>
+                <button onclick="res()" class="button">Restaurant</button>
+            </div>
+            <div class="gerichtDiv">
 
-        <button>Zu unserem Essen-Generator</button>
+                <input type="text" value="Hallo, Kategorie auswählen!" class="gericht" id="gericht" readonly>
+
+            </div>
+        </div>
+
     </main>
-
+    <footer>
+        <div class="text">
+            <p>Made and designed by Nico Proyer</p>
+            <span>
+                <a href="nicoproyer.at">© nicoproyer.at 2019-2022</a>
+            </span>
+            <p>App-Version: Alpha 1.0.2</p>
+        </div>
+    </footer>
 </body>
 
 </html>
