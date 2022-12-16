@@ -10,6 +10,19 @@ main {
     background: rgb(155, 155, 155);
 }
 
+.greet{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.greet img{
+    width: 10rem;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -20,6 +33,7 @@ main {
 
 .buttons {
     display: flex;
+    margin-bottom: 10px;
 }
 
 button {
@@ -28,6 +42,8 @@ button {
     padding: 0.25rem;
     background: grey;
     border: 0;
+    height: 50px;
+    width: 80px;
     color: white;
 
 }
