@@ -1,0 +1,9 @@
+{
+    "name": "Essens Generator",
+    "short_name": "Food Gen",
+    "theme_color": "#9b9b9b",
+    "background_color": "#9b9b9b",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/index.html"
+  }
