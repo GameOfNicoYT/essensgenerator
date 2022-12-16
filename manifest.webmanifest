@@ -1,16 +1,20 @@
 {
-    "name": "Essens Generator",
-    "short_name": "Essens Generator",
-    "theme_color": "#9b9b9b",
-    "background_color": "#9b9b9b",
-    "display": "fullscreen",
-    "scope": "/",
-    "start_url": "/index.html",
-    "icons":[
-      {
-        "src":"./img/question.png",
-        "type":"image/png",
-        "size":"512x512"
-      }
-    ]
+  "name": "Essens Generator",
+  "short_name": "Essens Generator",
+  "theme_color": "#9b9b9b",
+  "background_color": "#9b9b9b",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "img/question.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/question128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }]
   }
