@@ -10,7 +10,7 @@ main {
     background: rgb(155, 155, 155);
 }
 
-.greet{
+.greet {
     height: 20vh;
     width: 100%;
     display: flex;
@@ -19,11 +19,11 @@ main {
     margin-bottom: 80px;
 }
 
-.greet img{
+.greet img {
     width: 10rem;
 }
 
-.greet h4{
+.greet h4 {
     text-align: center;
 }
 
@@ -49,7 +49,7 @@ button {
     height: 45px;
     width: 75px;
     color: white;
-
+    font-weight: 900;
 }
 
 button:hover {
