@@ -8,7 +8,7 @@
     "start_url": "/index.html",
     "icons":[
       {
-        "src":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fde.vexels.com%2Fsvg-png%2Ffragezeichen%2F&psig=AOvVaw2Gc8vIdXhzt038pg8Puqlb&ust=1671309298556000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOir0rn-_vsCFQAAAAAdAAAAABAI",
+        "src":"./img/question.png",
         "type":"image/png",
         "size":"512x512"
       }
