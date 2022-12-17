@@ -5,38 +5,31 @@ let nachspeisen = ['Germknödl', 'Reisauflauf', 'Kaiserschmarren', 'Scheiterhauf
 let restaurant = ['Sajado', 'Bohmann', 'Buschenschank', 'Heinz', 'Kellerschlössl', 'Goldino', 'McDonalds', 'Giovanni', 'Losteria']
 let auswahl;
 
+function chooseDish(type){
 
-function alles() {
-    var max = liste.length;
-    var x = Math.round(Math.random() * (max - 1 - 0))
-    document.getElementById("gericht").value = liste[x];
-
-}
-
-function pre() {
-    var max = vorspeisen.length;
-    var x = Math.round(Math.random() * (max - 1 - 0))
-    document.getElementById("gericht").value = vorspeisen[x];
-}
-
-function mid() {
-    var max = hauptspeisen.length;
-    var x = Math.round(Math.random() * (max - 1 - 0))
-    document.getElementById("gericht").value = hauptspeisen[x];
-}
-
-function after() {
-    var max = nachspeisen.length;
-    var x = Math.round(Math.random() * (max - 1 - 0))
-    document.getElementById("gericht").value = nachspeisen[x];
-}
-
-function res() {
-    var max = restaurant.length;
-    var x = Math.round(Math.random() * (max - 1 - 0))
-    document.getElementById("gericht").value = restaurant[x];
-}
-
-function personen() {
-    window.open("./personen.html", '_self')
+    if(type == "all"){
+        var max = liste.length;
+        var x = Math.round(Math.random() * (max - 1 - 0))
+        document.getElementById("gericht").value = liste[x];
+    }
+    if(type == "pre"){
+        var max = vorspeisen.length;
+        var x = Math.round(Math.random() * (max - 1 - 0))
+        document.getElementById("gericht").value = vorspeisen[x];
+    }
+    if(type == "main"){
+        var max = hauptspeisen.length;
+        var x = Math.round(Math.random() * (max - 1 - 0))
+        document.getElementById("gericht").value = hauptspeisen[x];
+    }
+    if(type == "after"){
+        var max = nachspeisen.length;
+        var x = Math.round(Math.random() * (max - 1 - 0))
+        document.getElementById("gericht").value = nachspeisen[x];
+    }
+    if(type == "res"){
+        var max = restaurant.length;
+        var x = Math.round(Math.random() * (max - 1 - 0))
+        document.getElementById("gericht").value = restaurant[x];
+    }
 }
