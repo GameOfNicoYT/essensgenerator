@@ -50,9 +50,8 @@ function chooseDish(type) {
         document.getElementById("gericht").value = liste[x];
         window.localStorage.setItem(Date.now(), 100 + x)
         expireDate(x + 100)
-        if (tries > 5){
-            cookieClear()
-        }
+        console.log(x)
+        console.log(tries)
         tries = 0;
     }
     if (type == "pre") {
@@ -70,9 +69,8 @@ function chooseDish(type) {
         document.getElementById("gericht").value = vorspeisen[x];
         window.localStorage.setItem(Date.now(), 200 + x)
         expireDate(x + 200)
-        if (tries > 5){
-            cookieClear()
-        }
+        console.log(x)
+        console.log(tries)
         tries = 0;
     }
     if (type == "main") {
@@ -90,9 +88,8 @@ function chooseDish(type) {
         document.getElementById("gericht").value = hauptspeisen[x];
         window.localStorage.setItem(Date.now(), 300 + x)
         expireDate(x + 300)
-        if (tries > 5){
-            cookieClear()
-        }
+        console.log(x)
+        console.log(tries)
         tries = 0;
     }
     if (type == "after") {
@@ -110,9 +107,8 @@ function chooseDish(type) {
         document.getElementById("gericht").value = nachspeisen[x];
         window.localStorage.setItem(Date.now(), 400 + x)
         expireDate(x + 400)
-        if (tries > 5){
-            cookieClear()
-        }
+        console.log(x)
+        console.log(tries)
         tries = 0;
     }
     if (type == "res") {
@@ -130,9 +126,6 @@ function chooseDish(type) {
         document.getElementById("gericht").value = restaurant[x];
         window.localStorage.setItem(Date.now(), 500 + x)
         expireDate(x + 500)
-        if (tries > 5){
-            cookieClear()
-        }
         console.log(x)
         console.log(tries)
         tries = 0;
