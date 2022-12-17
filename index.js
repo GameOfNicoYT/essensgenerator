@@ -63,11 +63,11 @@ function chooseDish(type) {
         var max = vorspeisen.length;
         var x = Math.floor(Math.random() * max)
         while (storage.includes(x) || tries > 5) {
-            var max = liste.length;
+            var max = vorspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
         }
-        document.getElementById("gericht").value = liste[x];
+        document.getElementById("gericht").value = vorspeisen[x];
         window.localStorage.setItem(Date.now(), 200 + x)
         expireDate(x + 200)
         if (tries > 5){
@@ -83,7 +83,7 @@ function chooseDish(type) {
         var max = hauptspeisen.length;
         var x = Math.floor(Math.random() * max)
         while (storage.includes(x) || tries > 5) {
-            var max = liste.length;
+            var max = hauptspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
         }
@@ -103,7 +103,7 @@ function chooseDish(type) {
         var max = nachspeisen.length;
         var x = Math.floor(Math.random() * max)
         while (storage.includes(x) || tries > 5) {
-            var max = liste.length;
+            var max = nachspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
         }
@@ -123,7 +123,7 @@ function chooseDish(type) {
         var max = restaurant.length;
         var x = Math.floor(Math.random() * max)
         while (storage.includes(x) || tries > 5) {
-            var max = liste.length;
+            var max = restaurant.length;
             var x = Math.floor(Math.random() * max)
             tries++
         }
@@ -133,6 +133,8 @@ function chooseDish(type) {
         if (tries > 5){
             cookieClear()
         }
+        console.log(x)
+        console.log(tries)
         tries = 0;
     }
 }
