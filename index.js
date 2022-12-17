@@ -42,7 +42,7 @@ function chooseDish(type) {
         console.log(storage)
         var max = liste.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries > 5) {
+        while (storage.includes(x) || tries < 5) {
             var max = liste.length;
             var x = Math.floor(Math.random() * max)
             tries++
@@ -62,7 +62,7 @@ function chooseDish(type) {
         console.log(storage)
         var max = vorspeisen.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries > 5) {
+        while (storage.includes(x) || tries < 5) {
             var max = vorspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
@@ -82,7 +82,7 @@ function chooseDish(type) {
         console.log(storage)
         var max = hauptspeisen.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries > 5) {
+        while (storage.includes(x) || tries < 5) {
             var max = hauptspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
@@ -102,7 +102,7 @@ function chooseDish(type) {
         console.log(storage)
         var max = nachspeisen.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries > 5) {
+        while (storage.includes(x) || tries < 5) {
             var max = nachspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
@@ -122,7 +122,7 @@ function chooseDish(type) {
         console.log(storage)
         var max = restaurant.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries > 5) {
+        while (storage.includes(x) || tries < 5) {
             var max = restaurant.length;
             var x = Math.floor(Math.random() * max)
             tries++
