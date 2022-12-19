@@ -46,12 +46,17 @@ function chooseDish(type) {
             var max = liste.length;
             var x = Math.floor(Math.random() * max)
             tries++
+            if (tries > 50) {
+                chooseDishNoCookie(type)
+                return 0
+            }
         }
         document.getElementById("gericht").value = liste[x];
         window.localStorage.setItem(Date.now(), 100 + x)
         expireDate(x + 100)
-        console.log(x)
-        console.log(tries)
+        console.log("-Storage: " + storage)
+        console.log("ID: " + x)
+        console.log("Versuche: " + tries)
         tries = 0;
     }
     if (type == "pre") {
@@ -65,12 +70,17 @@ function chooseDish(type) {
             var max = vorspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
+            if (tries > 50) {
+                chooseDishNoCookie(type)
+                return 0
+            }
         }
         document.getElementById("gericht").value = vorspeisen[x];
         window.localStorage.setItem(Date.now(), 200 + x)
         expireDate(x + 200)
-        console.log(x)
-        console.log(tries)
+        console.log("-Storage: " + storage)
+        console.log("ID: " + x)
+        console.log("Versuche: " + tries)
         tries = 0;
     }
     if (type == "main") {
@@ -84,13 +94,18 @@ function chooseDish(type) {
             var max = hauptspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
+            if (tries > 50) {
+                chooseDishNoCookie(type)
+                return 0
+            }
 
         }
         document.getElementById("gericht").value = hauptspeisen[x];
         window.localStorage.setItem(Date.now(), 300 + x)
         expireDate(x + 300)
-        console.log(x)
-        console.log(tries)
+        console.log("-Storage: " + storage)
+        console.log("ID: " + x)
+        console.log("Versuche: " + tries)
         tries = 0;
     }
     if (type == "after") {
@@ -105,33 +120,42 @@ function chooseDish(type) {
             x = nachspeisen.length;
             var x = Math.floor(Math.random() * max)
             tries++
+            if (tries > 50) {
+                chooseDishNoCookie(type)
+                return 0
+            }
 
         }
         document.getElementById("gericht").value = nachspeisen[x];
         window.localStorage.setItem(Date.now(), 400 + x)
         expireDate(x + 400)
-        console.log(x)
-        console.log(tries)
+        console.log("-Storage: " + storage)
+        console.log("ID: " + x)
+        console.log("Versuche: " + tries)
         tries = 0;
     }
     if (type == "res") {
         for (i = 0; i < storage.length; i++) {
             storage[i] = storage[i] - 500;
         }
-        console.log(storage)
         var max = restaurant.length;
         var x = Math.floor(Math.random() * max)
-        while (storage.includes(x) || tries < 5) {
+        while (storage.includes(x)) {
+            console.log("TRY ID: " + x)
             var max = restaurant.length;
             var x = Math.floor(Math.random() * max)
             tries++
-
+            if (tries > 50) {
+                chooseDishNoCookie(type)
+                return 0
+            }
         }
         document.getElementById("gericht").value = restaurant[x];
         window.localStorage.setItem(Date.now(), 500 + x)
         expireDate(x + 500)
-        console.log(x)
-        console.log(tries)
+        console.log("-Storage: " + storage)
+        console.log("ID: " + x)
+        console.log("Versuche: " + tries)
         tries = 0;
     }
 }
@@ -139,81 +163,34 @@ function chooseDish(type) {
 
 function chooseDishNoCookie(type) {
 
-    let savedCookies = cookieRead()
-
-    storage = savedCookies;
-
-    // document.cookie = (x , "expires=" + )
-
     if (type == "all") {
-        for (i = 0; i < storage.length; i++) {
-            storage[i] = storage[i] - 100;
-        }
-        console.log(storage)
         var max = liste.length;
         var x = Math.floor(Math.random() * max)
         document.getElementById("gericht").value = liste[x];
-        window.localStorage.setItem(Date.now(), 100 + x)
-        expireDate(x + 100)
-        console.log(x)
-        console.log(tries)
-        tries = 0;
     }
     if (type == "pre") {
-        for (i = 0; i < storage.length; i++) {
-            storage[i] = storage[i] - 200;
-        }
-        console.log(storage)
         var max = vorspeisen.length;
         var x = Math.floor(Math.random() * max)
         document.getElementById("gericht").value = vorspeisen[x];
-        window.localStorage.setItem(Date.now(), 200 + x)
-        expireDate(x + 200)
-        console.log(x)
-        console.log(tries)
-        tries = 0;
     }
     if (type == "main") {
-        for (i = 0; i < storage.length; i++) {
-            storage[i] = storage[i] - 300;
-        }
-        console.log(storage)
         var max = hauptspeisen.length;
         var x = Math.floor(Math.random() * max)
         document.getElementById("gericht").value = hauptspeisen[x];
-        window.localStorage.setItem(Date.now(), 300 + x)
-        expireDate(x + 300)
-        console.log(x)
-        console.log(tries)
-        tries = 0;
+
     }
     if (type == "after") {
-        for (i = 0; i < storage.length; i++) {
-            storage[i] = storage[i] - 400;
-        }
-        console.log(storage)
         var max = nachspeisen.length;
         var x = Math.floor(Math.random() * max)
         document.getElementById("gericht").value = nachspeisen[x];
-        window.localStorage.setItem(Date.now(), 400 + x)
-        expireDate(x + 400)
-        console.log(x)
-        console.log(tries)
-        tries = 0;
+
     }
     if (type == "res") {
-        for (i = 0; i < storage.length; i++) {
-            storage[i] = storage[i] - 500;
-        }
-        console.log(storage)
         var max = restaurant.length;
         var x = Math.floor(Math.random() * max)
         document.getElementById("gericht").value = restaurant[x];
-        window.localStorage.setItem(Date.now(), 500 + x)
-        expireDate(x + 500)
-        console.log(x)
-        console.log(tries)
-        tries = 0;
+        console.log("safe")
+        tries = 0
     }
 }
 
