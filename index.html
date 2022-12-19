@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essen-Generator</title>
+    <title>Essens-Generator</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="manifest" href="manifest.webmanifest">
@@ -18,19 +18,20 @@
         <div class="wrapper">
             <div class="greet">
                 <img onclick="personen()" src="/img/question_0.png">
-                <h1>Essen-Generator</h1>
-                <h4>Keine Ahnung, was es zu Essen geben soll? Wir sind deine (Koch-)hilfe!</h4>
+                <h1>Essens-Generator</h1>
+                <h4>Keine Ahnung, was du kochen sollst?<br>
+                    Wir sind deine (Koch-)hilfe!</h4>
             </div>
             <div class="buttons">
                 <button onclick="chooseDish('all')" class="button">Alles</button>
                 <button onclick="chooseDish('pre')" class="button">Vorspeise</button>
                 <button onclick="chooseDish('main')" class="button">Hauptspeise</button>
                 <button onclick="chooseDish('after')" class="button">Nachspeise</button>
-                <button onclick="chooseDish('res')" class="button">Restaurant</button>
+                <button onclick="chooseDish('res')" class="button">Restaurants</button>
             </div>
             <div class="gerichtDiv">
+                    <input type="text" value="Kategorie auswählen!" class="gericht" id="gericht" readonly>
 
-                <input type="text" value="Hallo, Kategorie auswählen!" class="gericht" id="gericht" readonly>
 
                 <!-- </div>
             <button onclick="cookieClear()">RESET</button>
