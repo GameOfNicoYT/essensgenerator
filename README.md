@@ -1,3 +1,3 @@
-This Programm is licenced by nicoproyer.at
+This Programm is licenced by nicoproyer.at CC-BY-NC-ND
 
-Diese Software ist nur für privatgebrauch in der Familie Proyer zu verwenden. Jeglicher Missbrauch wird umgehend blockiert und angezeigt.
+This software chooses from a small spectrum of dishes and restaurants when you don't know, what you gonna cook today.
