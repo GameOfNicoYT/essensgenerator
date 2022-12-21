@@ -7,11 +7,22 @@
 main {
     height: 90vh;
     width: 100%;
-    background: rgb(155, 155, 155);
+    background: #fff0db;
 }
 
-html {
+html{
     overflow: hidden;
+}
+
+.KochtopfWrapper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pngKochtopf{
+    width: 50%;
 }
 
 .greet {
@@ -36,7 +47,7 @@ html {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    height: 70%;
+    height: 100%;
 }
 
 .buttons {
@@ -48,16 +59,16 @@ button {
     border-radius: 10%;
     margin: auto;
     padding: 0.25rem;
-    background: grey;
+    background: #e4d5b7;
     border: 0;
     height: 45px;
     width: 75px;
-    color: white;
+    color: rgb(21, 21, 21);
     font-weight: 700;
 }
 
 button:hover {
-    background: rgb(105, 105, 105);
+    background: #c4b8a1;
 }
 
 .gericht {
@@ -79,7 +90,21 @@ footer {
     justify-content: center;
     width: 100%;
     height: 10vh;
-    background: rgb(73, 73, 73);
+    background: #d9b99b;
+}
+
+.round{
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 50%;
+}
+.right{
+    margin-left: -22px;
+}
+
+.left{
+    margin-right: -22px;
 }
 
 .text {

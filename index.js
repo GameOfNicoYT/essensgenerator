@@ -7,6 +7,8 @@ let auswahl;
 let storage;
 
 
+console.log(liste.length)
+
 function cookieRead() {
     let cookie = document.cookie.split(";")
     let cookieIDs = []
@@ -157,56 +159,5 @@ function chooseDish(type) {
         console.log("ID: " + x)
         console.log("Versuche: " + tries)
         tries = 0;
-    }
-}
-
-
-function chooseDishNoCookie(type) {
-
-    if (type == "all") {
-        var max = liste.length;
-        var x = Math.floor(Math.random() * max)
-        document.getElementById("gericht").value = liste[x];
-    }
-    if (type == "pre") {
-        var max = vorspeisen.length;
-        var x = Math.floor(Math.random() * max)
-        document.getElementById("gericht").value = vorspeisen[x];
-    }
-    if (type == "main") {
-        var max = hauptspeisen.length;
-        var x = Math.floor(Math.random() * max)
-        document.getElementById("gericht").value = hauptspeisen[x];
-
-    }
-    if (type == "after") {
-        var max = nachspeisen.length;
-        var x = Math.floor(Math.random() * max)
-        document.getElementById("gericht").value = nachspeisen[x];
-
-    }
-    if (type == "res") {
-        var max = restaurant.length;
-        var x = Math.floor(Math.random() * max)
-        document.getElementById("gericht").value = restaurant[x];
-        console.log("safe")
-        tries = 0
-    }
-}
-
-function cookieClear() {
-    window.localStorage.clear();
-    window.open('/index.html', '_self')
-    deleteAllCookies()
-}
-
-function deleteAllCookies() {
-    var cookies = document.cookie.split(";");
-
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 }
